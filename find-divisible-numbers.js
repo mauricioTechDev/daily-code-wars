@@ -7,11 +7,21 @@ function divisibleBy(numbers, divisor){
  let divisibleNumbers = []
 
 for(var i=0; i<=numbers.length; i++){
- if(numbers[i]%divisor == 0){
- divisibleNumbers.push(numbers[i])
- }
-
+  if(numbers[i]%divisor == 0){
+    divisibleNumbers.push(numbers[i])
+  }
  }
  return divisibleNumbers
-
 }
+ // second code war
+ // Get the number n (n>0) to return the reversed sequence from n to 1.
+ //
+ // Example : n=5 >> [5,4,3,2,1]
+
+ const reverseSeq = n => {
+let reverse = []
+for (let i=1; i<=n; i++){
+reverse.unshift(i)
+}
+  return reverse;
+};
