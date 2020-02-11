@@ -73,8 +73,8 @@ let isMatchingBrackets = function (str) {
                     console.log(map[last])
 
             if (str[i] !== map[last]) {
-              console.log(str[i]+"hello")
-              console.log(map[last]+"ohShit")
+              console.log(str[i])
+              console.log(map[last])
               return false
             };
         }
