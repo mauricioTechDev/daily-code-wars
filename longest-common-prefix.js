@@ -17,14 +17,25 @@
 
 
 
-public String longestCommonPrefix(String[] strs) {
-    if (strs == null || strs.length == 0) return "";
-    for (int i = 0; i < strs[0].length() ; i++){
-        char c = strs[0].charAt(i);
-        for (int j = 1; j < strs.length; j ++) {
-            if (i == strs[j].length() || strs[j].charAt(i) != c)
-                return strs[0].substring(0, i);
+var longestCommonPrefix = function(strs) {
+    var res = '';
+    if(strs.length === 0){
+        return '';
+    } else if(strs.length ===1 ){
+        return strs[0];
+    }
+
+    for(var i = 0;i<strs[0].length;i++){
+        for(var j = 0; j<strs.length-1;){
+            if(strs[j][i] === strs[j+1][i]){
+                j++;
+                if(j===strs.length-1){
+                    res +=strs[j][i];
+                }
+            }else{
+              return res
+            }
         }
     }
-    return strs[0];
-}
+    return res
+};
