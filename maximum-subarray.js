@@ -47,6 +47,23 @@ var maxSubArray = function(nums) {
     max_so_far = Math.max(curr_max, max_so_far);
   }
   return max_so_far;
+///////////////////////////////////////////////
+Refactored solution using Kadanes algorithm
+In linear time and constant space
+
+  let maxSoFar = nums[0];
+   let maxEndingHere = nums[0];
+
+
+   for (let i = 1; i < nums.length; i++) {
+     maxEndingHere = Math.max(maxEndingHere + nums[i], nums[i]);
+
+     // Did we beat the 'maxSoFar' with the 'maxEndingHere'?
+     maxSoFar = Math.max(maxSoFar, maxEndingHere);
+   }
+
+   return maxSoFar;
+
 
 
 };
