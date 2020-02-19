@@ -48,7 +48,7 @@ var maxSubArray = function(nums) {
   }
   return max_so_far;
 ///////////////////////////////////////////////
-Refactored solution using Kadanes algorithm
+Refactored solution using Kadanes algorithm using dynamic programing
 In linear time and constant space
 
   let maxSoFar = nums[0];
