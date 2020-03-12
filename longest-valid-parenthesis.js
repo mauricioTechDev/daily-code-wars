@@ -15,6 +15,7 @@ Explanation: The longest valid parentheses substring is "()()"
 
 
 
+
 var longestValidParentheses = function(s) {
     var start = 0;
     var max = 0;
