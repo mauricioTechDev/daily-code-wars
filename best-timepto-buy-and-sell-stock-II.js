@@ -31,3 +31,21 @@ var maxProfit = function(prices) {
     }
     return money
 };
+
+
+
+// REFACTORED
+var maxProfit = function(prices) {
+    let maxMoney = 0
+    let minMoney = Number.POSITIVE_INFINITY
+
+    for(let i = 0; i < prices.length; i++){
+        if(prices[i] < minMoney){
+            minMoney = prices[i]
+        }
+        if(prices[i] - minMoney > maxMoney){
+            maxMoney = prices[i] - minMoney
+        }
+    }
+    return maxMoney
+};
