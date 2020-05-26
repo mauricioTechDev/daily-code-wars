@@ -19,18 +19,17 @@ Explanation: Rob house 1 (money = 2), rob house 3 (money = 9) and rob house 5 (m
 
 
 var rob = function(nums) {
-        if(nums==null || nums.length == 0) return 0
-    if(nums.length == 1) return nums[0]
-    if(nums.length == 2) return Math.max(nums[0], nums[1])
-    let max_gold = []
+  if(nums.length === null || nums.length === 0) return 0;
+  if(nums.length === 1 ) return nums[0]
+  if(nums.length === 2) Math.max(nums[0], nums[1])
 
-  for(let i = 0; i < nums.length; i++) {
-    let current = nums[i];
-    let prevMax = max_gold[i - 1] || 0;
-    let twoBackMax = max_gold[i - 2] || 0;
-    max_gold.push(Math.max(current + twoBackMax, prevMax));
+  let dp = [];
+  dp.push(0);
+  dp.push(nums[0])
+
+  for(let i = 1; i < nums.length; i++){
+    dp.push(Math.max(nums[i] + dp[i-1], dp[i]))
   }
 
-  return max_gold[nums.length - 1];
-
+  return dp[dp.length - 1]
 };
