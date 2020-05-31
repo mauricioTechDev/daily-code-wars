@@ -33,3 +33,29 @@ var lengthOfLongestSubstring = function(s) {
     }
     return max;
 };
+
+
+// USING A SET
+var lengthOfLongestSubstring = function(s) {
+  // create set that exepts unique values
+   let set = new Set()
+   let longestSubstring = 0
+   // outr two pointers
+    let backRunner = 0;
+    let forwardRunner = 0
+
+    // Start out moving window
+    while(backRunner < s.length && forwardRunner < s.length){
+      // if set does not inlude number then add
+        if( !set.has(s[forwardRunner]) ){
+            set.add(s[forwardRunner])
+            // in order to determine max we add 1 to the sutraction of two points becouse they are indexes and we want is length
+            longestSubstring = Math.max(longestSubstring, forwardRunner - backRunner + 1)
+            forwardRunner++
+        } else {
+            set.delete(s[backRunner])
+            backRunner++
+        }
+    }
+    return longestSubstring
+};
