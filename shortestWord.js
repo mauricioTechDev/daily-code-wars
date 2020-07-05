@@ -17,3 +17,18 @@ function findShort(s){
   }
   return smallest;
 }
+
+
+// TYPESCRIPT
+
+export function findShort(s: string): number {
+  const arr: string[] = s.split(' ')
+  let smallest: number = arr[0].length
+
+  for(let i = 0; i < arr.length; i++){
+    if(arr[i].length <= smallest){
+      smallest = arr[i].length
+    }
+  }
+  return smallest; // your code here
+}
