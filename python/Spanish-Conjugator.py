@@ -151,17 +151,17 @@ def conjugate(verb):
     
     if(verb[secondToLastIndex:lastIndex] == 'ar'):
         for key in femalDict:
-            tempWord = tempWord[:secondToLastIndex] + femalDict[key] + tempWord[lastIndex:]
+            tempWord = tempWord[:secondToLastIndex] + femalDict[key]
             ans[verb].append(tempWord)
             tempWord = verb
     if(verb[secondToLastIndex:lastIndex] == 'er'):
         for key in mascDict:
-            tempWord = tempWord[:secondToLastIndex] + mascDict[key] + tempWord[lastIndex:]
+            tempWord = tempWord[:secondToLastIndex] + mascDict[key]
             ans[verb].append(tempWord)
             tempWord = verb
     if(verb[secondToLastIndex:lastIndex] == 'ir'):
         for key in neutDict:
-            tempWord = tempWord[:secondToLastIndex] + neutDict[key] + tempWord[lastIndex:]
+            tempWord = tempWord[:secondToLastIndex] + neutDict[key]
             ans[verb].append(tempWord)
             tempWord = verb
         
