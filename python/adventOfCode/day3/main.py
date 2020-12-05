@@ -26,6 +26,6 @@ def part2(vals: list, sol_part1: int) -> int:
 if __name__ == "__main__":
   vals = readFile()
   sol_part1 = part1(vals)
-  print(part1(vals))
+  print(f"Part 1: {part1(vals)}")
   print(f"Part 2: {part2(vals, sol_part1)}")
   
