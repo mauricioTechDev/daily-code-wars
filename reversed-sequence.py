@@ -8,4 +8,8 @@ def reverse_seq(n):
         ans.append(n)
         n-=1
     return ans
-    
+
+
+#REFACTOR
+def reverseseq(n):
+    return range(n, 0, -1)
