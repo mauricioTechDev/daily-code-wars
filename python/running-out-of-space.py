@@ -3,7 +3,7 @@
 #     returns an array showing the space decreasing. For example, 
 #     running this function on the array ['i', 'have','no','space'] 
 #     would produce ['i','ihave','ihaveno','ihavenospace'].
-
+# SOLUTION WITH NO MODULE
 def spacey(array):
     dictionary = dict()
     for num in range(len(array)):
@@ -15,3 +15,9 @@ def spacey(array):
     
     return dictionary.values()
     
+# SOLUTION WITH itertools MODULE
+    
+from itertools import accumulate
+
+def spacey(array):
+    return list(accumulate(array))
