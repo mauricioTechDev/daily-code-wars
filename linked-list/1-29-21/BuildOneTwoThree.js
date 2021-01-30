@@ -1,3 +1,4 @@
+// Code war 1
 // https://www.codewars.com/kata/55be95786abade3c71000079/train/javascript
 
 function Node(data) {
