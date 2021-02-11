@@ -3,6 +3,8 @@
  * @param {number} K
  * @return {number[][]}
  */
+// https://leetcode.com/problems/k-closest-points-to-origin/
+
 var kClosest = function(points, K) {
     let out = [];
     function dist(point) {
