@@ -32,3 +32,20 @@ var maxProfit = function(prices) {
     
 };
 
+// WITH A MAP
+var maxProfit = function(prices) {
+    let map = {
+        max: 0,
+        min: prices[0]
+    }
+    
+    for(let i = 1; i < prices.length; i++){
+        map.min = Math.min(map.min, prices[i]);
+        map.max = Math.max(map.max, prices[i]-map.min)
+    }
+    
+    return map.max
+    
+    
+};
+
